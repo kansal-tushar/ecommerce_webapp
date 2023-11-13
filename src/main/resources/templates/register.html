@@ -27,10 +27,10 @@
             <ul class="navbar-nav mr-auto"></ul>
             <ul class="navbar-nav">
                 <li class="nav-item active">
-                    <a class="nav-link" th:href="@{/}" href="#">home</a>
+                    <a class="nav-link" th:href="@{/}" href="#">Home</a>
                 </li>
                 <li class="nav-item active">
-                    <a class="nav-link" th:href="@{/shop}" href="#">shop</a>
+                    <a class="nav-link" th:href="@{/shop}" href="#">Shop</a>
                 </li>
                 <li class="nav-item active">
                     <a class="nav-link" href="#">Sign Up</a>
@@ -42,35 +42,40 @@
     </div>
 </nav>
 <div class="container">
-    <div class="col-sm-6">
-        <h3 style="margin-top: 10px">Sign Up Now</h3>
-        <p>Please fill out this to register</p>
-        <form th:action="@{/register}" th:object="${user}" method="post">
-            <div class="form-group">
-                <label for="firstName">First Name</label>
-                <input type="text" name="firstName" id="firstName" required placeholder="Your Firstname" class="form-control form-control-lg">
+    <div class="row d-flex justify-content-center">
+        <div class="col-sm-6">
+            <div class="d-flex justify-content-center">
+                <h3 style="margin-top: 10px">Sign Up </h3>
             </div>
-            <div class="form-group">
-                <label for="lastName">Last Name</label>
-                <input type="text" name="lastName" id="lastName" required placeholder="Your Lastname" class="form-control form-control-lg">
-            </div>
-            <div class="form-group">
-                <label for="email">Email address</label>
-                <input type="email" class="form-control form-control-lg" required minlength="6" placeholder="Email" name="email" id="email"
-                       aria-describedby="emailHelp">
-                <small id="emailHelp" class="form-text text-muted">We'll never share your email with
-                    anyone else.</small>
-            </div>
-            <div class="form-group">
-                <label for="password">Password</label>
-                <input type="password" class="form-control form-control-lg" required placeholder="Password" name="password"
-                       id="password">
-            </div>
+            <form th:action="@{/register}" th:object="${user}" method="post">
+                <div class="form-group">
+                    <label for="firstName" style="font-size: 18px;">First Name:</label>
+                    <input type="text" name="firstName" id="firstName" required placeholder="Your Firstname" class="form-control ">
+                </div>
+                <div class="form-group">
+                    <label for="lastName" style="font-size: 18px;">Last Name:</label>
+                    <input type="text" name="lastName" id="lastName" required placeholder="Your Lastname" class="form-control ">
+                </div>
+                <div class="form-group">
+                    <label for="email" style="font-size: 18px;">Email Address:</label>
+                    <input type="email" class="form-control " required minlength="6" placeholder="Email" name="email" id="email"
+                           aria-describedby="emailHelp">
+                    <small id="emailHelp" class="form-text text-muted">We'll never share your email with
+                        anyone else.</small>
+                </div>
+                <div class="form-group">
+                    <label for="password" style="font-size: 18px;">Password:</label>
+                    <input type="password" class="form-control " required placeholder="Password" name="password"
+                           id="password">
+                </div>
 
-            <input type="submit" value="Register" class="btn btn-primary btn-block">
-            <span style="margin-top: 10px">Already have an account <a class="linkControl" href="./login.html"
-                                                                      th:href="@{/login}">Login here</a></span>
-        </form>
+                <input type="submit" value="Register" class="btn btn-primary btn-block">
+                <div class="d-flex justify-content-center">
+                    <span style="margin-top: 10px">Already have an account? <a class="linkControl" href="./login.html"
+                                                                              th:href="@{/login}">Login here</a></span>
+                </div>
+            </form>
+        </div>
     </div>
 </div>
 
