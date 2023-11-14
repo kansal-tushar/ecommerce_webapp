@@ -33,4 +33,4 @@ build/
 .vscode/
 
 ### data.txt ###
-data.txt
+.src/resources/data.txt
